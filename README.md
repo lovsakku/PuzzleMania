@@ -26,7 +26,7 @@ JavaScript: Handles game logic, including the puzzle mechanics, timer and moves 
 
 
 
-🎮How to Play
+🎮How to Play:
 
 Open the Game: Launch index.html in your browser.
 
