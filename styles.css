@@ -1,0 +1,195 @@
+/* Basic styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #fadadd, #ffb6c1, #e6e6fa, #98fb98);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #4b0082; /* Indigo */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    animation: bounce 2s infinite;
+}
+
+.logo-img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.logo {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #ff69b4; /* Hot pink */
+    text-shadow: 2px 2px #9370db, 4px 4px #ffd700; /* Pastel purple and gold */
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.main-heading {
+    font-size: 3rem;
+    color: #ff69b4; /* Hot pink */
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px #9370db; /* Pastel purple */
+    font-weight: bold;
+}
+
+h1, h2 {
+    margin-bottom: 1rem;
+    color: #4b0082; /* Indigo */
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    width: 80%;
+    background-color: #e6e6fa; /* Pastel purple */
+    color: #4b0082; /* Indigo */
+    font-weight: bold;
+}
+
+button {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #ffb6c1; /* Light pink */
+    color: #4b0082; /* Indigo */
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffcccb; /* Pink */
+    transform: scale(1.1);
+}
+
+.form-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff0f5; /* Lavender blush */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#login-container {
+    display: flex;
+}
+
+#game-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.puzzle {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 2px;
+    background-color: #f0e68c; /* Pastel yellow */
+    margin-bottom: 1rem;
+}
+
+.tile {
+    width: 100px;
+    height: 100px;
+    background-color: #98fb98; /* Pastel green */
+    cursor: grab;
+    user-select: none;
+    border: 1px solid #9370db; /* Pastel purple */
+    background-size: cover;
+    background-position: center;
+    animation: fadeIn 0.5s;
+    transition: transform 0.3s ease;
+}
+
+.tile.dragging {
+    opacity: 0.5;
+}
+
+.tile.over {
+    border: 2px dashed #4b0082;
+}
+
+.empty {
+    background-color: #ffb6c1; /* Light pink */
+}
+
+/* Error message styling */
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+/* Scoreboard styling */
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+/* Button container styling */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Keyframe animations */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

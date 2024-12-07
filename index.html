@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PuzzleMania - Sliding Puzzle Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="login-container" class="form-container">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="PuzzleMania Logo" class="logo-img">
+            <h1 class="logo">PuzzleMania</h1>
+        </div>
+        <form id="login-form">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <div id="login-error" class="error-message"></div>
+            <button type="submit">Login</button>
+            <p>Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
+        </form>
+    </div>
+
+    <div id="signup-container" class="form-container">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="PuzzleMania Logo" class="logo-img">
+            <h1 class="logo">PuzzleMania</h1>
+        </div>
+        <form id="signup-form">
+            <h2>Sign Up</h2>
+            <input type="text" id="new-username" placeholder="Username" required>
+            <input type="password" id="new-password" placeholder="Password" required minlength="6">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="address" placeholder="Address" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required pattern="[0-9]{10}">
+            <div id="signup-error" class="error-message"></div>
+            <button type="submit">Sign Up</button>
+            <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+        </form>
+    </div>
+
+    <div id="game-container" class="game-container">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="PuzzleMania Logo" class="logo-img">
+            <h1 class="logo">PuzzleMania</h1>
+        </div>
+        <div class="scoreboard">
+            <span id="timer">Time: 0s</span>
+            <span id="moves">Moves: 0</span>
+        </div>
+        <div id="puzzle" class="puzzle"></div>
+        <div class="button-container">
+            <button id="shuffle">Shuffle</button>
+            <button id="solve-button">Solve Puzzle</button>
+            <button id="logout">Logout</button>
+            <button onclick="window.location.href='rankings.html'">View Rankings</button>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
