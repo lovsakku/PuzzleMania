@@ -30,4 +30,3 @@
 
 ---
 
-Happy puzzling, and may your moves always lead to victory! 🎉
